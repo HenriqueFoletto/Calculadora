@@ -1,0 +1,79 @@
+body{
+    background-color:rgb(109, 179, 179);
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*----------------------------------------------------*/
+
+#corpo{
+    background-color: rgb(143, 173, 172);
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    padding:5px;
+    border: 1px solid black;
+}
+/*----------------------------------------------------*/
+
+#tela{
+    background-color: white;
+    width: 180px;
+    height: 30px;
+    text-align: right;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 30px;
+    overflow: hidden;
+}
+/*----------------------------------------------------*/
+
+button{
+    font-size: 16px;
+    border-radius: 100%;
+    border: 0px;
+    width: 45px;
+    height: 45px;
+    background-color: rgb(230, 230, 230);
+    transition: 200ms;
+}
+
+button:hover{
+    background-color: rgb(190, 190, 190);
+    transition: 200ms;
+    border: 1px solid white;
+    color: white;
+}
+
+.blue{
+    background-color: rgb(180, 218, 253);
+}
+
+.blue:hover{
+    background-color: rgb(150, 197, 226);
+    transition: 200ms;
+}
+
+#green{
+    background-color: rgb(180, 253, 170);
+}
+
+#green:hover{
+    background-color: rgb(150, 209, 157);
+    transition: 200ms;
+}
+
+#darkblue{
+    background-color: rgb(180, 180, 255);
+}
+
+#darkblue:hover{
+    background-color: rgb(150, 150, 196);
+    transition: 200ms;
+}
+
+/*----------------------------------------------------*/
