@@ -13,34 +13,34 @@
             <div id="tela"></div>
             <table>
                 <tr>
-                    <td><button id="green">AC</button></td>
-                    <td><button class="blue">^</button></td>
-                    <td><button class="blue">%</button></td>
-                    <td><button class="blue">/</button></td>
+                    <td><button onclick="limpar()" id="limpar">AC</button></td>
+                    <td><button value="^" id="p2" class="botao">^</button></td>
+                    <td><button value="%" id="porcentagem" class="botao">%</button></td>
+                    <td><button value="/" id="divisao" class="botao">/</button></td>
                 </tr>
                 <tr>
-                    <td><button>7</button></td>
-                    <td><button>8</button></td>
-                    <td><button>9</button></td>
-                    <td><button class="blue">X</button></td>
+                    <td><button value=7 class="botao">7</button></td>
+                    <td><button value=8 class="botao">8</button></td>
+                    <td><button value=9 class="botao">9</button></td>
+                    <td><button value="X" id="multiplicacao" class="botao">X</button></td>
                 </tr>
                 <tr>
-                    <td><button>4</button></td>
-                    <td><button>5</button></td>
-                    <td><button>6</button></td>
-                    <td><button class="blue">-</button></td>
+                    <td><button value=4 class="botao">4</button></td>
+                    <td><button value=5 class="botao">5</button></td>
+                    <td><button value=6 class="botao">6</button></td>
+                    <td><button value="-" id="subtracao" class="botao">-</button></td>
                 </tr>
                 <tr>
-                    <td><button>1</button></td>
-                    <td><button>2</button></td>
-                    <td><button>3</button></td>
-                    <td><button class="blue">+</button></td>
+                    <td><button value=1 class="botao">1</button></td>
+                    <td><button value=2 class="botao">2</button></td>
+                    <td><button value=3 class="botao">3</button></td>
+                    <td><button value="+" id="soma" class="botao">+</button></td>
                 </tr>
                 <tr>
-                    <td><button>0</button></td>
-                    <td><button>,</button></td>
-                    <td><button id="clear">C</button></td>
-                    <td><button id="darkblue">=</button></td>
+                    <td><button value=0 class="botao">0</button></td>
+                    <td><button value="," id="decimal" class="botao">,</button></td>
+                    <td><button onclick="apagar()" id="apagar">C</button></td>
+                    <td><button onclick="resultado()" id="resultado">=</button></td>
                 </tr>
             </table>
         </div>

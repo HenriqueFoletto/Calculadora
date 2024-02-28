@@ -32,48 +32,43 @@ body{
 }
 /*----------------------------------------------------*/
 
-button{
+#virgula, button{
     font-size: 16px;
     border-radius: 100%;
     border: 0px;
     width: 45px;
     height: 45px;
     background-color: rgb(230, 230, 230);
-    transition: 200ms;
 }
 
-button:hover{
+#virgula:hover, button:hover{
     background-color: rgb(190, 190, 190);
-    transition: 200ms;
     border: 1px solid white;
     color: white;
 }
 
-.blue{
+#p2, #porcentagem, #divisao, #multiplicacao, #subtracao, #soma{
     background-color: rgb(180, 218, 253);
 }
 
-.blue:hover{
+#p2:hover, #porcentagem:hover, #divisao:hover, #multiplicacao:hover, #subtracao:hover, #soma:hover{
     background-color: rgb(150, 197, 226);
-    transition: 200ms;
 }
 
-#green{
+#limpar{
     background-color: rgb(180, 253, 170);
 }
 
-#green:hover{
+#limpar:hover{
     background-color: rgb(150, 209, 157);
-    transition: 200ms;
 }
 
-#darkblue{
+#resultado{
     background-color: rgb(180, 180, 255);
 }
 
-#darkblue:hover{
+#resultado:hover{
     background-color: rgb(150, 150, 196);
-    transition: 200ms;
 }
 
 /*----------------------------------------------------*/
