@@ -15,7 +15,7 @@ body{
     height: 300px;
     border-radius: 10px;
     padding:5px;
-    border: 1px solid black;
+    border: 1px solid black; 
 }
 /*----------------------------------------------------*/
 
@@ -30,15 +30,33 @@ body{
     font-size: 30px;
     overflow: hidden;
 }
+
+.caixa2{
+    width: 200px;
+    margin-left: 1px;
+    display: flex;
+    flex-wrap: wrap;
+}
 /*----------------------------------------------------*/
 
-#virgula, button{
+#decimal, button{
     font-size: 16px;
     border-radius: 100%;
     border: 0px;
     width: 45px;
     height: 45px;
+    margin: 2px;
     background-color: rgb(230, 230, 230);
+}
+
+.td{
+    border: 1px solid black; 
+    width: 45px;
+}
+
+#limpar{
+    width: 95px;
+    border-radius: 25px;
 }
 
 #virgula:hover, button:hover{
@@ -70,5 +88,4 @@ body{
 #igual:hover{
     background-color: rgb(150, 150, 196);
 }
-
 /*----------------------------------------------------*/

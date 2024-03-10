@@ -1,11 +1,12 @@
 let tela = document.getElementById('tela');
-const botoes = document.querySelectorAll('.botao');
+const botoes = document.querySelectorAll('.botao'); 
 
 //funcionalidade dos botoes
 for(let i = 0; i < botoes.length; i++){
-    botoes[i].addEventListener('click', function(e){
 
+    botoes[i].addEventListener('click', function(e){
         tela.innerHTML += e.target.value;
+    
     })
 }
 //--------------------------------------------------------
@@ -23,57 +24,69 @@ function apagar(){
 }
 //--------------------------------------------------------
 
-//calcular....
+//calcular...
 function resultado(){
 
     let result = tela.innerHTML;
-    let operadores = result.split("+", "-", "*", "/", "^", "%");
-    let numeros = result.replace(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
-    let primeiro;
-    let segundo;
-    let a;
+    let operadores = ["+", "-", "*", "/", "^", "%"];
+    let resultado = 0;
 
-        for(i = 0 ; i < result.length; i++){
-            if(operadores[i] === "*" || operadores === "/" || operadores === "^" || operadores === "%"){
-                primeiro = numeros[i];
-                segundo = numeros[i++];
+    for(i = 0; i < result.length; i++){
+
+        if(i === 1){
+            if(result[i] === operadores[0]){
+
+                resultado += parseFloat(result[i-1]) + parseFloat(result[i+1]);
             }
-
-            if (isNaN(segundo)) continue;
-            
-            switch(operadores[i]){
-                case "*":
-                    a *= segundo;
-                break;
-                case "/":
-                    a /= segundo;
-                break;
-                case "^":
-                    a = Math.pow(a, segundo);
-                break;
-                case "%":
-                    a = (a / 100) * segundo;
-                break;
-                }
-                console.log(a, operador, segundo);
+    
+            else if(result[i] === operadores[1]){
+    
+                resultado += parseFloat(result[i-1]) - parseFloat(result[i+1]);
             }
-            console.log(a);
-            
-        }
+    
+            else if(result[i] === operadores[2]){
+    
+                resultado += parseFloat(result[i-1]) * parseFloat(result[i+1]);
+            }
+    
+            else if(result[i] === operadores[3]){
+    
+                resultado += parseFloat(result[i-1]) / parseFloat(result[i+1]);
+            }
+    
+            else if(result[i] === operadores[4]){
+    
+                resultado += Math.pow(parseFloat(result[i-1]), parseFloat(result[i+1]));
+            }
+        }else{
 
-        for(i = 0 ; i < result.length; i++){
-            if (isNaN(segundo)) continue;
-            
-            switch(operadores[i]){
-                case "+":
-                    a += segundo;
-                break;
-                case "-":
-                    a -= segundo;
-                break;
-                }
-                console.log(a, operador, segundo);
+            if(result[i] === operadores[0]){
 
+                resultado += parseFloat(result[i+1]);
+            }
+    
+            else if(result[i] === operadores[1]){
+    
+                resultado -= parseFloat(result[i+1]);
+            }
+    
+            else if(result[i] === operadores[2]){
+    
+                resultado *= parseFloat(result[i+1]);
+            }
+    
+            else if(result[i] === operadores[3]){
+    
+                resultado /=  parseFloat(result[i+1]);
+            }
+    
+            else if(result[i] === operadores[4]){
+    
+                resultado = Math.pow(parseFloat(resultado), parseFloat(result[i+1]));
+            }
         }
-            console.log(a);   
+    };
+    tela.innerHTML = resultado;
+    console.log(resultado);
+}
         
